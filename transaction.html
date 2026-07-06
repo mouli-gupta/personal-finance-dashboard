@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="transaction">
+    <div class="transaction_page">
+        <div class="side_bar">
+
+            <img src="asset/icons/side_bar.png" class="side_bar_logo" alt="Finance Logo">
+            <h2>FINANCE<br>DASHBOARD</h2>
+
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <img src="asset/icons/dashboard.png" class="menu_icon" alt="Dashboard">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="transaction.html">
+                        <img src="asset/icons/transaction.png" class="menu_icon" alt="Transactions">
+                        Transactions
+                    </a>
+                </li>
+                <li>
+                    <a href="insight.html">
+                        <img src="asset/icons/insight.png" class="menu_icon" alt="Insights">
+                        Insights
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <img src="asset/icons/profile.png" class="menu_icon" alt="Profile">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <img src="asset/icons/logout.png" class="menu_icon" alt="Logout">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main_content">
+
+            <div class="top_bar">
+
+                <h1>Transactions</h1>
+
+                <p id="user_name">Welcome, User</p>
+
+            </div>
+
+
+
+            <div class="transaction_summary">
+
+                <div class="transaction_card">
+
+                    <h3>Total Transactions</h3>
+
+                    <h2 id="total_transactions">128</h2>
+
+                </div>
+
+                <div class="transaction_card">
+
+                    <h3>This Month</h3>
+
+                    <h2 id="monthly_transactions">18</h2>
+
+                </div>
+
+                <div class="transaction_card">
+
+                    <h3>Total Income</h3>
+
+                    <h2 id="transaction_income">₹240,000</h2>
+
+                </div>
+
+                <div class="transaction_card">
+
+                    <h3>Total Expenses</h3>
+
+                    <h2 id="transaction_expense">₹95,000</h2>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="transaction_toolbar">
+
+                <button id="open_modal">
+                    + Add Transaction
+                </button>
+                <button id="export_csv">
+
+                    Export CSV
+
+                </button>
+
+                <div class="transaction_filter">
+
+                    <input type="text" id="search_transaction" placeholder="Search Transactions">
+
+                    <select id="category_filter">
+
+                        <option>All Categories</option>
+                        <option>Housing</option>
+                        <option>Food</option>
+                        <option>Transport</option>
+                        <option>Shopping</option>
+                        <option>Utilities</option>
+
+                    </select>
+
+                    <select id="type_filter">
+
+                        <option>All Types</option>
+                        <option>Income</option>
+                        <option>Expense</option>
+
+                    </select>
+
+                    <select id="sort_filter">
+
+                        <option value="Newest">Newest</option>
+
+                        <option value="Oldest">Oldest</option>
+
+                        <option value="Highest">Highest Amount</option>
+
+                        <option value="Lowest">Lowest Amount</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Transaction History -->
+
+            <div class="transaction_history">
+
+                <h2>Transaction History</h2>
+
+                <table id="transaction_table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+
+                            <th>Name</th>
+
+                            <th>Category</th>
+
+                            <th>Type</th>
+
+                            <th>Payment</th>
+
+                            <th>Amount</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="transaction_body">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="transaction_modal" id="transaction_modal">
+
+                <div class="modal_box">
+
+                    <h2>Add New Transaction</h2>
+
+                    <div class="form_row">
+
+                        <div class="form_group">
+
+                            <label>Transaction Name</label>
+
+                            <input type="text" id="transaction_title" placeholder="Enter Transaction">
+
+                        </div>
+
+                        <div class="form_group">
+
+                            <label>Amount</label>
+
+                            <input type="number" id="transaction_amount" placeholder="₹0">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form_row">
+
+                        <div class="form_group">
+
+                            <label>Category</label>
+
+                            <select id="transaction_category">
+
+                                <option>Housing</option>
+                                <option>Food</option>
+                                <option>Transport</option>
+                                <option>Shopping</option>
+                                <option>Utilities</option>
+                                <option>Healthcare</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form_group">
+
+                            <label>Type</label>
+
+                            <select id="transaction_type">
+
+                                <option>Income</option>
+                                <option>Expense</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form_row">
+
+                        <div class="form_group">
+
+                            <label>Date</label>
+
+                            <input type="date" id="transaction_date">
+
+                        </div>
+
+                        <div class="form_group">
+
+                            <label>Payment Method</label>
+
+                            <select id="payment_method">
+
+                                <option>Cash</option>
+                                <option>UPI</option>
+                                <option>Credit Card</option>
+                                <option>Debit Card</option>
+                                <option>Net Banking</option>
+                                <option>Bank Transfer</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form_group">
+
+                            <label>Notes</label>
+
+                            <textarea id="transaction_notes" placeholder="Add a note (optional)"></textarea>
+
+                        </div>
+
+                    </div>
+                    <div class="form_group">
+
+                        <label>Recurring</label>
+
+                        <select id="transaction_recurring">
+
+                            <option value="No">No</option>
+
+                            <option value="Monthly">Monthly</option>
+
+                            <option value="Yearly">Yearly</option>
+
+                        </select>
+
+                    </div>
+
+            
+
+                <div class="modal_buttons">
+
+                    <button id="close_modal">
+
+                        Cancel
+
+                    </button>
+
+                    <button id="save_transaction">
+
+                        Add Transaction
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    
+
+
+
+
+
+    
+
+
+
+       <div class="delete_modal" id="delete_transaction_modal">
+
+        <div class="delete_box">
+
+            <img src="asset/icons/warning.png" class="delete_icon" alt="Warning">
+
+            <h2>
+
+                Delete Transaction?
+
+            </h2>
+
+            <p>
+
+                This transaction will be permanently deleted.
+
+            </p>
+
+            <div class="modal_buttons">
+
+                <button id="cancel_delete">
+
+                    Cancel
+
+                </button>
+
+                <button id="confirm_delete">
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="view_modal" id="view_transaction_modal">
+
+        <div class="view_box">
+
+            <h2>Transaction Details</h2>
+
+            <div class="view_item">
+
+                <strong>Title:</strong>
+
+                <span id="view_title"></span>
+
+            </div>
+
+            <div class="view_item">
+
+                <strong>Category:</strong>
+
+                <span id="view_category"></span>
+
+            </div>
+
+            <div class="view_item">
+
+                <strong>Type:</strong>
+
+                <span id="view_type"></span>
+
+            </div>
+
+            <div class="view_item">
+
+                <strong>Amount:</strong>
+
+                <span id="view_amount"></span>
+
+            </div>
+
+            <div class="view_item">
+
+                <strong>Payment:</strong>
+
+                <span id="view_payment"></span>
+
+            </div>
+
+            <div class="view_item">
+
+                <strong>Date:</strong>
+
+                <span id="view_date"></span>
+
+            </div>
+
+            <div class="view_item">
+
+                <strong>Notes:</strong>
+
+                <span id="view_notes"></span>
+
+            </div>
+
+            <div class="modal_buttons">
+
+                <button id="close_view">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/sampleData.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/transaction.js"></script>
+</body>
+
+</html>

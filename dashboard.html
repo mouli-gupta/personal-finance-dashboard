@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="dashboard">
+    <div class="dashboard_page">
+        <div class="side_bar">
+
+            <img src="asset/icons/side_bar.png" class="side_bar_logo" alt="Finance Logo">
+            <h2>FINANCE<br>DASHBOARD</h2>
+
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <img src="asset/icons/dashboard.png" class="menu_icon" alt="Dashboard">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="transaction.html">
+                        <img src="asset/icons/transaction.png" class="menu_icon" alt="Transactions">
+                        Transactions
+                    </a>
+                </li>
+                <li>
+                    <a href="insight.html">
+                        <img src="asset/icons/insight.png" class="menu_icon" alt="Insights">
+                        Insights
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <img src="asset/icons/profile.png" class="menu_icon" alt="Profile">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <img src="asset/icons/logout.png" class="menu_icon" alt="Logout">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="top_bar">
+                <h1>Dashboard</h1>
+                <p id="user_name">
+
+                    Welcome, User
+
+                </p>
+            </div>
+
+            <div class="summary_bar">
+                <div class="summary">
+                    <h3>Current Balance</h3>
+                    <h2 id="total_balance">
+
+                        ₹145,000
+
+                    </h2>
+                    <p>12.5% inc from last time</p>
+                </div>
+                <div class="summary">
+                    <h3>Monthly Income</h3>
+                    <h2 id="total_income">
+
+                        ₹240,000
+
+                    </h2>
+                    <p>8.3% inc from last month</p>
+                </div>
+                <div class="summary">
+                    <h3>Monthly Expenses </h3>
+                    <h2 id="total_expense">
+
+                        ₹95,000
+
+                    </h2>
+                    <p> 5.3% dec from last month</p>
+                </div>
+                <div class="summary">
+                    <h3>Monthly Savings</h3>
+                    <h2 id="total_savings">
+
+                        ₹145,000
+
+                    </h2>
+                    <p>15.8% inc from last month</p>
+                </div>
+
+            </div>
+
+            <div class="recent_summ">
+                <div class="spent_summ">
+                    <div class="spending_ovr">
+
+    <h2>Expense Breakdown (June)</h2>
+
+    <div class="expense_content">
+
+        <div class="chart_box">
+
+            <canvas id="expense_chart"></canvas>
+
+        </div>
+
+        <ul
+            class="spending_list"
+            id="expense_breakdown">
+
+        </ul>
+
+    </div>
+
+</div>
+                    <div class="inc_exp">
+
+                        <h2>Cash Flow</h2>
+
+                        <canvas id="cashflow_chart"></canvas>
+
+                    </div>
+
+                </div>
+                <div class="right_panel">
+                    <div class="recent_trns">
+
+                        <h2>Recent Transactions</h2>
+
+                        <ul id="transaction_list">
+
+                        </ul>
+
+                    </div>
+                    <div class="total_sav">
+
+                        <h2>Savings Goal</h2>
+
+                        <div class="goal_details">
+
+                            <div class="goal_row">
+                                <p>Target Goal</p>
+                                <span id="goal_target">
+
+                                    ₹200,000
+
+                                </span>
+                            </div>
+
+                            <div class="goal_row">
+                                <p>Current Savings</p>
+                                <span id="goal_current">
+
+                                    ₹145,000
+
+                                </span>
+                            </div>
+
+                            <div class="goal_row">
+                                <p>Remaining</p>
+                                <span id="goal_remaining">
+
+                                    ₹55,000
+
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="progress_bar">
+
+                            <div class="progress_fill" id="progress_fill">
+
+                            </div>
+                        </div>
+
+                        <p class="progress_text" id="progress_text">
+
+                            72% Completed
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/sampleData.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

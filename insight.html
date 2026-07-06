@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="insight">
+    <div class="insight_page">
+        <div class="side_bar">
+
+            <img src="asset/icons/side_bar.png" class="side_bar_logo" alt="Finance Logo">
+            <h2>FINANCE<br>DASHBOARD</h2>
+
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <img src="asset/icons/dashboard.png" class="menu_icon" alt="Dashboard">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="transaction.html">
+                        <img src="asset/icons/transaction.png" class="menu_icon" alt="Transactions">
+                        Transactions
+                    </a>
+                </li>
+                <li>
+                    <a href="insight.html">
+                        <img src="asset/icons/insight.png" class="menu_icon" alt="Insights">
+                        Insights
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <img src="asset/icons/profile.png" class="menu_icon" alt="Profile">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <img src="asset/icons/logout.png" class="menu_icon" alt="Logout">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+
+            <div class="top_bar">
+
+                <h1>Insights</h1>
+
+                <p id="user_name">Welcome, User</p>
+
+            </div>
+
+
+
+            <div class="insight_summary">
+
+                <div class="insight_card">
+
+                    <h3>Highest Expense</h3>
+
+                    <h2 id="highest_expense">₹30,000</h2>
+
+                    <p>Housing</p>
+
+                </div>
+
+                <div class="insight_card">
+
+                    <h3>Highest Income</h3>
+
+                    <h2 id="highest_income">₹80,000</h2>
+
+                    <p>Salary</p>
+
+                </div>
+
+                <div class="insight_card">
+
+                    <h3>Average Monthly Spend</h3>
+
+                    <h2 id="average_spend">₹95,000</h2>
+
+                    <p>Last 6 Months</p>
+
+                </div>
+
+                <div class="insight_card">
+
+                    <h3>Saving Rate</h3>
+
+                    <h2 id="saving_rate">39%</h2>
+
+                    <p>This Month</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Charts -->
+
+            <div class="chart_section">
+
+<div class="expense_chart">
+
+    <h2>Expense Breakdown</h2>
+
+    <div class="expense_chart_content">
+
+        <div class="expense_chart_canvas">
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+
+                <div class="cashflow_chart">
+
+                    <h2>Income vs Expenses</h2>
+
+                    <canvas id="cashFlowChart"></canvas>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Analysis -->
+
+            <div class="analysis_section">
+
+                <div class="category_analysis">
+
+                    <h2>Category Analysis</h2>
+
+                    <ul id="category_list">
+
+                    </ul>
+
+                </div>
+
+
+                <div class="monthly_compare">
+
+                    <h2>Monthly Comparison</h2>
+
+                    <canvas id="monthlyCompareChart"></canvas>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Spending Trends -->
+
+            <div class="trend_section">
+
+                <div class="spending_trend">
+
+                    <h2>Monthly Spending Trend</h2>
+
+                    <canvas id="spendingTrendChart"></canvas>
+
+                </div>
+
+
+                <div class="insight_report">
+
+                    <h2>Financial Insights</h2>
+
+                    <ul>
+
+                        <li id="insight_one">
+                            Housing accounts for 40% of your expenses.
+                        </li>
+
+                        <li id="insight_two">
+                            Food spending increased by 12%.
+                        </li>
+
+                        <li id="insight_three">
+                            Savings improved compared to last month.
+                        </li>
+
+                        <li id="insight_four">
+                            Shopping expenses remained stable.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+        ```
+
+    </div>
+    </div>
+    <script src="js/sampleData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/data.js"></script>
+
+    <script src="js/insight.js"></script>
+
+    
+
+</body>
+
+</html>
