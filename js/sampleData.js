@@ -5,9 +5,9 @@ const defaultUsers = [
     password:"vasu123",
 
     profile:{
-        fullName:"Vasu Gupta",
-        username:"vasu",
-        email:"vasu@gmail.com",
+        fullName:"Arun Smith",
+        username:"Arum",
+        email:"arun@gmail.com",
         phone:"+91 9876543210",
         country:"India",
         memberSince:"2026-12"
